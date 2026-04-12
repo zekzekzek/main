@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <title>juni pelzek</title>
+  <meta name="description" content=""/>
+  <meta property="og:title" content="juni pelzek"/>
+  <meta property="og:description" content=""/>
+  
+
+
+  
+<script>
+class CVMediaObject {
+constructor(props) {
+  this.url = props.url;
+  this.width = props.width;
+  this.height = props.height;
+}
+
+toString() { return this.url; }
+}
+
+var mediaFiles = {};
+mediaFiles[''] = new CVMediaObject({ url: '' });
+
+
+globalThis.cv = Object.assign(globalThis.cv || {}, {
+media: function (filename) {
+  return mediaFiles[filename] || mediaFiles[''];
+},
+});
+</script>
+
+
+  
+<script>
+globalThis.__cvRuntimeData = Object.assign(globalThis.__cvRuntimeData || {}, {"uid":"qAcP78QtjVXJimUh5VGM460iOhG3"});
+</script>
+
+  
+  <script src='qAcP78QtjVXJimUh5VGM460iOhG322.js' defer></script>
+  <script src='site-bundle-1733461839427.js' defer></script>
+  <link rel="stylesheet" type="text/css" href="site-bundle-1733461839428.css" />
+
+
+  <link href="//pelzek.com/css/CircularStdBook.css" rel="stylesheet" type="text/css"/> 
+  <style>
+    * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style-type: none;
+font-variant-numeric: tabular-nums;
+}
+
+:root {
+--typeface: 'Inter Variable', sans-serif;
+--line-height: 1.6;
+--font-size: 12.5px;
+--background-color: #fff;
+--color: #000;
+--column-width: clamp(320px, calc(30dvw - 48px), 480px);
+--wash: rgba(0, 0, 0, 0.075);
+--darkWash: rgba(0, 0, 0, 0.1);
+--attachmentHeight: 90px;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+  --background-color: #000;
+  --color: #eee;
+  --wash: rgba(255, 255, 255, 0.15);
+  --darkWash: rgba(255, 255, 255, 0.2);
+}
+}
+
+html,
+body {
+width: 100%;
+height: 100%;
+overflow-y: hidden;
+overflow-x: scroll;
+overscroll-behavior-x: none;
+overscroll-behavior-y: none;
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+body {
+font-family: var(--typeface);
+line-height: var(--line-height);
+font-size: var(--font-size);
+background-color: var(--background-color);
+color: var(--color);
+-webkit-font-smoothing: antialiased;
+-webkit-tap-highlight-color: transparent;
+text-size-adjust: none;
+}
+
+body > div {
+width: fit-content;
+height: 100%;
+}
+
+.container {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+padding: 24px;
+column-gap: 48px;
+height: 100%;
+width: fit-content;
+}
+
+.identity {
+width: var(--column-width);
+flex-shrink: 0;
+}
+
+.section {
+height: 100%;
+display: flex;
+flex-direction: column;
+flex-shrink: 0;
+position: relative;
+}
+
+.columnWrap {
+flex: 1;
+display: flex;
+flex-shrink: 0;
+position: relative;
+height: calc(100% - ((var(--font-size) * var(--line-height)) * 2));
+}
+
+.columns {
+column-width: var(--column-width);
+column-count: auto;
+column-fill: auto;
+column-gap: 48px;
+width: var(--column-width);
+flex-shrink: 0;
+flex-grow: 0;
+}
+
+.headingWrap {
+white-space: nowrap;
+width: calc(var(--column-width) / 2);
+}
+
+h2 {
+font-family: var(--typeface);
+line-height: var(--line-height);
+font-size: var(--font-size);
+font-weight: normal;
+column-span: all;
+margin-bottom: calc(var(--font-size) * var(--line-height));
+font-weight: 500;
+position: sticky;
+left: 24px;
+width: fit-content;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+border-bottom: 1px solid var(--darkWash);
+}
+
+.experience {
+margin-bottom: calc(var(--font-size) * var(--line-height));
+break-inside: avoid;
+}
+
+.year {
+font-variant-numeric: tabular-nums;
+}
+
+.title {
+font-weight: 500;
+}
+
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child) {
+margin-bottom: calc(var(--font-size) * var(--line-height));
+}
+
+ul, ol {
+padding-left: 1.25em;
+}
+
+ul li {
+list-style-type: disc;
+}
+
+ol li {
+list-style-type: decimal;
+}
+
+.attachments {
+width: 100%;
+height: var(--attachmentHeight);
+position: relative;
+}
+
+.description ~ .attachments {
+margin-top: calc((var(--font-size) * var(--line-height)) / -2);
+}
+
+.scrollableRegion {
+position: absolute;
+inset: 0;
+overflow-x: scroll;
+}
+
+.layout {
+display: flex;
+flex-direction: row;
+column-gap: 8px;
+white-space: nowrap;
+}
+
+.attachment {
+flex-shrink: 0;
+flex-grow: 0;
+height: var(--attachmentHeight);
+position: relative;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.attachment::after {
+content: '';
+border-radius: inherit;
+border: 1px solid var(--wash);
+inset: 0;
+z-index: 1;
+position: absolute;
+}
+
+.attachment img,
+.attachment video {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.scrollbar {
+position: fixed;
+width: var(--column-width);
+height: 3px;
+left: 50%;
+bottom: 8px;
+transform: translateX(-50%);
+border-radius: 24px;
+overflow: hidden;
+}
+
+.track {
+position: absolute;
+inset: 0;
+background-color: var(--darkWash);
+}
+
+.slider {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+width: 33%;
+border-radius: 24px;
+background-color: var(--color);
+pointer-events: none;
+}
+
+@media (max-width: 540px) {
+:root {
+  --column-width: calc(100dvw - 48px);
+}
+
+html, body {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: unset;
+}
+
+p, .experience {
+  scroll-snap-align: center;
+scroll-snap-stop: normal;
+}
+}
+
+img[alt="minipic"] { 
+  max-width:  10vh; 
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <div id="root">
+  </div>
+</body>
+</html>
